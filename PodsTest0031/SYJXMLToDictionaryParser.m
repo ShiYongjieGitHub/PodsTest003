@@ -1,17 +1,17 @@
 //
-//  AdrXMLToDictionaryParser.m
+//  SYJXMLToDictionaryParser.m
 //  XMLTest
 //
 //  Created by PA on 15/2/2.
 //
 //1.0.1
 
-#import "AdrXMLToDictionaryParser.h"
+#import "SYJXMLToDictionaryParser.h"
 
 #pragma GCC diagnostic ignored "-Wobjc-missing-property-synthesis"
 #pragma GCC diagnostic ignored "-Wdirect-ivar-access"
 
-@interface AdrXMLToDictionaryParser () <NSXMLParserDelegate>
+@interface SYJXMLToDictionaryParser () <NSXMLParserDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *root;
 @property (nonatomic, strong) NSMutableArray *stack;
@@ -19,15 +19,15 @@
 
 @end
 
-@implementation AdrXMLToDictionaryParser
+@implementation SYJXMLToDictionaryParser
 
-+ (AdrXMLToDictionaryParser *)sharedInstance
++ (SYJXMLToDictionaryParser *)sharedInstance
 {
     static dispatch_once_t once;
-    static AdrXMLToDictionaryParser *sharedInstance;
+    static SYJXMLToDictionaryParser *sharedInstance;
     dispatch_once(&once, ^{
         
-        sharedInstance = [[AdrXMLToDictionaryParser alloc] init];
+        sharedInstance = [[SYJXMLToDictionaryParser alloc] init];
     });
     return sharedInstance;
 }
@@ -48,7 +48,7 @@
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    AdrXMLToDictionaryParser *copy = [[[self class] allocWithZone:zone] init];
+    SYJXMLToDictionaryParser *copy = [[[self class] allocWithZone:zone] init];
     copy.collapseTextNodes = _collapseTextNodes;
     copy.stripEmptyNodes = _stripEmptyNodes;
     copy.trimWhiteSpace = _trimWhiteSpace;

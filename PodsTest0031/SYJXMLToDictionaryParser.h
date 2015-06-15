@@ -1,5 +1,5 @@
 //
-//  AdrXMLToDictionaryParser.h
+//  SYJXMLToDictionaryParser.h
 //  XMLTest
 //
 //  Created by PA on 15/2/2.
@@ -29,9 +29,9 @@ typedef NS_ENUM(NSInteger, AdrXMLDictionaryNodeNameMode)
     AdrXMLDictionaryNodeNameModeNever
 };
 
-@interface AdrXMLToDictionaryParser : NSObject <NSCopying>
+@interface SYJXMLToDictionaryParser : NSObject <NSCopying>
 
-+ (AdrXMLToDictionaryParser *)sharedInstance;
++ (SYJXMLToDictionaryParser *)sharedInstance;
 
 @property (nonatomic, assign) BOOL collapseTextNodes; // defaults to YES
 @property (nonatomic, assign) BOOL stripEmptyNodes;   // defaults to YES
